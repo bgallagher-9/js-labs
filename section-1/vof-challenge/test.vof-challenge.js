@@ -4,6 +4,7 @@ describe('Intro to variables, operators, and functions', function() {
 
     t('create a function that returns the number "4".', function() {
       var result = returns4();
+      
       chai.assert.equal(result, 4);
     });
 
