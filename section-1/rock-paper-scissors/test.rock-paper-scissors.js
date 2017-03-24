@@ -9,7 +9,7 @@ describe('Rock Paper Scissors', function() {
 
     var result = whoWins(first, second);
 
-    chai.assert.equal(result, 'first');
+    chai.assert.equal(result, 'rock');
   });
 
   it('rock beats scissors - reverse order.', function() {
@@ -19,7 +19,7 @@ describe('Rock Paper Scissors', function() {
 
     var result = whoWins(first, second);
 
-    chai.assert.equal(result, 'second');
+    chai.assert.equal(result, 'rock');
   });
 
   it('paper beats rock', function() {
@@ -29,7 +29,7 @@ describe('Rock Paper Scissors', function() {
 
     var result = whoWins(first, second);
 
-    chai.assert.equal(result, 'first');
+    chai.assert.equal(result, 'paper');
   });
 
   it('paper beats rock - reverse order', function() {
@@ -39,7 +39,7 @@ describe('Rock Paper Scissors', function() {
 
     var result = whoWins(first, second);
 
-    chai.assert.equal(result, 'second');
+    chai.assert.equal(result, 'paper');
   });
 
   it('scissors beats paper', function() {
@@ -49,7 +49,7 @@ describe('Rock Paper Scissors', function() {
 
     var result = whoWins(first, second);
 
-    chai.assert.equal(result, 'first');
+    chai.assert.equal(result, 'scissors');
   });
 
   it('scissors beats paper - reverse order', function() {
@@ -59,7 +59,7 @@ describe('Rock Paper Scissors', function() {
 
     var result = whoWins(first, second);
 
-    chai.assert.equal(result, 'second');
+    chai.assert.equal(result, 'scissors');
   });
 
   it('both paper, neither wins.', function() {
