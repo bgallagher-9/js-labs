@@ -40,9 +40,9 @@ describe('Strings are like arrays so', function() {
 
       var str = 'Jack smote the wicked dragon mightily with a wet fish.'
 
-      var indexOfDragon = str.indexOf('dragon');
+      var indexOfDragon = str.indexOf('wicked');
 
-      chai.assert.equal(indexOfDragon, 22);
+      chai.assert.equal(indexOfDragon, 20);
     });
 
     factoid('a letter. If it does not exist, the number will be -1.', function() {

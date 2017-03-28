@@ -25,12 +25,12 @@ describe('String Challenge ', function() {
   });
 
   challenge('Implement this function to truncate a sentence to the specified number of letters and add ellipses.', function() {
-    var sentence = 'Gone Fishin with Danny Glover and Joe Pesci was possibly the worst movie I have ever eeen.';
+    var str = 'Gone Fishin with Danny Glover and Joe Pesci was possibly the worst movie I have ever eeen.';
 
-    var result = truncateByCount(sentence, 10);
+    var result = truncateByCount(str, 10);
     chai.assert.equal(result, 'Gone Fishi...');
 
-    var result = truncateByCount(sentence, 20);
+    var result = truncateByCount(str, 20);
     chai.assert.equal(result, 'Gone Fishin with Dan...');
   });
 

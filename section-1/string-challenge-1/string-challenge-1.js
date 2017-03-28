@@ -1,36 +1,36 @@
 
-
 function stripPuncutation(str) {
-  var noPunc = '';
-
+  var output = '';
   for (var i = 0; i < str.length; i++) {
-    if (',.:'.indexOf(str[i]) === -1) {
-      noPunc += str[i];
+//   if (str[i] !== ',' && str[i] !== '.' && str[i] !== ':') {
+//     output += str[i];
+//   }
+//   return output;
+// }
+    if ('.,:'.indexOf(str[i]) === -1){
+      output += str[i]
     }
   }
-    return noPunc;
+  return output;
 }
+
 
 function stringReverser(str) {
-  var reverse = '';
-  for (var i = str.length-1; i > -1; i--) {
-    reverse += str[i];
+  var output = '';
+  for (var i = str.length - 1; i > -1; i--) {
+    output += str[i];
   }
-  return reverse;
+  return output;
 }
-
 
 function truncate(sentence) {
-  var output = '';
-  return output = sentence.substr(0, 15)+ '...';
+  // var output = '';
+  return sentence.substr(0, 15) + '...';
 }
-
 
 function truncateByCount(sentence, count) {
-  var output = '';
-  return output = sentence.substring(0, count) + '...';
+  return sentence.substr(sentence, count) + '...';
 }
-
 
 function capitalizeEveryOtherLetter(str) {
   var output = '';
