@@ -23,6 +23,11 @@ describe('HL7', function() {
       chai.assert.equal(birthMonth, 6);
     });
 
+    it('can return the date of birth.', function() {
+      var birthDay = PIDParser.birthDay(pid);
+      chai.assert.equal(birthDay, 15);
+    });
+
     //TODO: Write a test for the birth day.
   });
 
@@ -50,8 +55,18 @@ describe('HL7', function() {
 
     //TODO: Write the test for getting the receiving application.
 
+    it('can return the receiving application.', function() {
+      var receivingApp = MSHParser.receveivingApplication(msh);
+      chai.assert.equal(receivingApp, 'LABADT');
+    });
+
+
     //TODO: Write the test for getting the receiving facility.
 
+    it('can return the receiving facility.', function() {
+      var receivingFac = MSHParser.receivingFacility(msh);
+      chai.assert.equal(receivingFac, 'MCM');
+    });
   });
 
 });
