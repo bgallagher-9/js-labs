@@ -2,7 +2,15 @@ function onlyDigits(str) {
 	return isFinite(str);
 	// return parseFloat(str) && isFinite(str);
 	// return !isNaN(parseFloat(str)) && isFinite(str);
+	//for (var i = 0; i < str.length; i++) {
+	//if ('abcdefghijklmnopqrstuvwxyz'.indexOf(str[i]) > -1) {
+	//return false;
+	//}
+	//return true;
 }
+
+
+
 
 function formatPhoneNumber(str) {
 	var output1 = str.slice(0, 3).toString();
@@ -24,41 +32,65 @@ function formatCreditCardNumber(str) {
 }
 
 function missingInteger(str) {
-	var zeroToTen = 45
-	var sum = 0;
-  for (var i = 0; i < str.length; i++) {
-      sum += parseInt(str[i],10);
-			//console.log(sum)
-			//console.log(1+2+3+4+6+7+8+9+0+5)
-  }
-  return zeroToTen - sum;
+	for (var i = 0; i <= 9; i++) {
+		if (str.indexOf(i)===-1){
+			return i;
+		}
+	}
 }
+// 	var zeroToTen = 45
+// 	var sum = 0;
+//   for (var i = 0; i < str.length; i++) {
+// 		//if (str.indexOf(i) === -1) {
+// 		//return i;
+// 	//}
+// 	//output++;
+//       sum += parseInt(str[i],10);
+//   }
+//   return zeroToTen - sum;
+// }
 
 function repeatChar(char, count) {
 	return char.repeat(count);
 }
+//
+// var output = '';
+// for (var i = 0; i < count; i++){
+// 	output += char;
+// }
+// return output;
 
 function delimitWord(str, char) {
    var array = str.split('');
 	 return array.join('.');
 }
+// var result = '';
+// 	for (var i = 0; i < str.lenght; i++) {
+// 		result += str[i] + char;
+// 	}
+// 	return result;
+//
+
 
 function reverseWord(str) {
 	var arr = str.split('');
-	// console.log(arr)
 	var output = [];
 	for (var i = str.length - 1; i > -1; i--) {
 		output += arr[i];
-		// console.log(arr.push(output[i]));
 		arr.push(output[i]);
 	}
-	// console.log(output.split());
 	return output.split();
 }
+// var output = '';
+// for (var i = str.length - 1; i < 0; i--) {
+// 	output += str[i];
+// }
+// return output;
+// }
+
 
 function reverseSentence(str) {
 	var arr = str.split(' ');
-	// console.log(arr)
 	var output = [];
 	var output2 = '';
 	var output3 = ''
@@ -78,11 +110,27 @@ function kabobCase(str) {
 }
 
 function camelCase(str) {
-	var output1 = '';
-	var output2 = '';
-	// console.log(str.split(' ').join(''));
-	output1 = str.split(' ').join('');
-	output2 = output1.replace('c', 'C').replace('i', 'I').replace('o', 'O').replace('a', 'A').replace('m', 'M');
-	// console.log(output2);
-	return output2;
+// 	var output1 = '';
+// 	var output2 = '';
+// 	// console.log(str.split(' ').join(''));
+// 	output1 = str.split(' ').join('');
+// 	output2 = output1.replace('c', 'C').replace('i', 'I').replace('o', 'O').replace('a', 'A').replace('m', 'M');
+// 	// console.log(output2);
+// 	return output2;
+// }
+
+var strArray = str.split(' ');
+var output = '';
+for (var i = 0; i < strArray.length; i++) {
+	if (i === 0) {
+		output += strArray[i].toLowerCase();
+	}
+	else {
+		var string = strArray[i];
+		var firstLetter = string[0].toUpperCase();
+		var restOfLetter = string.slice(1).toLowerCase();
+		output += firstLetter + restOfLetter;
+		}
+	}
+	return output;
 }
